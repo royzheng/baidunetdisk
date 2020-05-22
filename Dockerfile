@@ -49,8 +49,8 @@ RUN set -eux; \
     rm -f /tmp/baidudnetdisk.deb; \
     mkdir -p /config; \
     mkdir -p /downloads; \
-    ln -s /downloads /headless/baidunetdiskdownload; \
-    ln -s /config /headless/baidunetdisk; \
+    ln -s /downloads $HOME/baidunetdiskdownload; \
+    ln -s /config $HOME/baidunetdisk; \
 # 设置文件权限
     find $STARTUPDIR  -name '*.sh' -o -name '*.desktop' | xargs chmod a+x; \
     find $HOME  -name '*.sh' -o -name '*.desktop' | xargs chmod a+x; \
