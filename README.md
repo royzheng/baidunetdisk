@@ -20,3 +20,8 @@
 docker pull royzheng/baidunetdisk
 docker run -d -v YOUR_CONFIG_PATH:/config -v YOUR_DOWNLOAD_PATH:/downloads -e VNC_PW=YOUR_PASSWORD -p YOUR_PORT:5901 -p YOUR_HTTP_PORT:6901 royzheng/baidunetdisk:latest
 ```
+
+## 示例
+![vnc界面](demo/vnc_desktop.png)
+![vnc百度网盘界面](demo/vnc_baidunetdisk.png)
+![浏览器百度网盘界面](demo/novnc_baidunetdisk.png)
