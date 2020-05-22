@@ -10,4 +10,3 @@ stop:
 		sudo docker rm -f ${CONTAINER_NAME} | true
 
 restart: stop start
-

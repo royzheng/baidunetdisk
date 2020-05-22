@@ -22,6 +22,7 @@ docker run -d -v YOUR_CONFIG_PATH:/config -v YOUR_DOWNLOAD_PATH:/downloads -e VN
 ```
 
 ## 示例
-![vnc界面](demo/vnc_desktop.png)
-![vnc百度网盘界面](demo/vnc_baidunetdisk.png)
-![浏览器百度网盘界面](demo/novnc_baidunetdisk.png)
+
+![vnc界面](https://raw.githubusercontent.com/royzheng/baidunetdisk/master/demo/vnc_desktop.png)
+![vnc百度网盘界面](https://raw.githubusercontent.com/royzheng/baidunetdisk/master/demo/vnc_baidunetdisk.png)
+![浏览器百度网盘界面](https://raw.githubusercontent.com/royzheng/baidunetdisk/master/demo/novnc_baidunetdisk.png)
