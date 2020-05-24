@@ -46,7 +46,7 @@ RUN set -eux; \
 # 安装百度网盘
     wget -O /tmp/baidudnetdisk.deb http://wppkg.baidupcs.com/issue/netdisk/LinuxGuanjia/3.0.1/baidunetdisk_linux_3.0.1.2.deb; \
     dpkg -i /tmp/baidudnetdisk.deb; \
-    rm -f /tmp/baidudnetdisk.deb;
+    rm -f /tmp/baidudnetdisk.deb; \
 # 设置文件权限
     find $STARTUPDIR  -name '*.sh' -o -name '*.desktop' | xargs chmod a+x; \
     find $HOME  -name '*.sh' -o -name '*.desktop' | xargs chmod a+x; \
