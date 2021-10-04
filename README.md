@@ -1,4 +1,4 @@
-# 百度网盘 ubuntu xfce 镜像
+# 百度网盘 ubuntu xfce 镜像 - Synology 6.2.x
 
 - ubuntu 系统+xfce 桌面 + vnc
 - 百度官方 linux 客户端
