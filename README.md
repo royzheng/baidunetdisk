@@ -1,4 +1,4 @@
-# 百度网盘 ubuntu xfce 镜像 - Synology 6.2.x
+# 百度网盘 3.0 & ubuntu xfce 镜像 - Synology 6.2.x
 
 - ubuntu 系统+xfce 桌面 + vnc
 - 百度官方 linux 客户端
@@ -17,7 +17,7 @@
 
 ```
 docker pull royzheng/baidunetdisk
-docker run -d -v YOUR_CONFIG_PATH:/config -v YOUR_DOWNLOAD_PATH:/downloads -e VNC_PW=YOUR_PASSWORD -p YOUR_PORT:5901 -p YOUR_HTTP_PORT:6901 royzheng/baidunetdisk:latest
+docker run -d -v YOUR_CONFIG_PATH:/app/baidunetdisk -v YOUR_DOWNLOAD_PATH:/app/baidunetdiskdownload -e VNC_PW=YOUR_PASSWORD -p YOUR_PORT:5901 -p YOUR_HTTP_PORT:6901 royzheng/baidunetdisk:latest
 ```
 
 ## 示例
