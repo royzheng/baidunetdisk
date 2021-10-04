@@ -5,8 +5,6 @@ MAINTAINER Roy Zheng "docker@roy.cc"
 ENV DISPLAY=:1 \
     VNC_PORT=5901 \
     NO_VNC_PORT=6901 \
-    CONFIG_VOLUME=/config \
-    DOWNLOAD_VOLUME=/download \
     HOME=/app \
     TERM=xterm \
     STARTUPDIR=/dockerstartup \
@@ -29,10 +27,10 @@ RUN set -eux; \
 # 安装字体
     apt-get install -y ttf-wqy-zenhei; \
 # 安装tigervnc和no-vnc
-    wget -qO- https://dl.bintray.com/tigervnc/stable/tigervnc-1.8.0.x86_64.tar.gz | tar xz --strip 1 -C /; \
+    wget -qO- https://jaist.dl.sourceforge.net/project/tigervnc/stable/1.8.0/tigervnc-1.8.0.x86_64.tar.gz | tar xz --strip 1 -C /; \
     mkdir -p $NO_VNC_HOME/utils/websockify; \
     wget -qO- https://github.com/novnc/noVNC/archive/v1.0.0.tar.gz | tar xz --strip 1 -C $NO_VNC_HOME; \
-    wget -qO- https://github.com/novnc/websockify/archive/v0.6.1.tar.gz | tar xz --strip 1 -C $NO_VNC_HOME/utils/websockify; \
+    wget -qO- https://github.com/novnc/websockify/archive/v0.6.1.tar.gz | tar xz --strip 1 -C $NO_VNC_HOME/utils/websockify; \    
     chmod +x -v $NO_VNC_HOME/utils/*.sh; \
     ln -s $NO_VNC_HOME/vnc_lite.html $NO_VNC_HOME/index.html; \
 # 安装Chrome
@@ -55,7 +53,7 @@ RUN set -eux; \
     apt-get clean -y;
 
 EXPOSE $VNC_PORT $NO_VNC_PORT
-VOLUME [$CONFIG_VOLUME, $DOWNLOAD_VOLUME]
+VOLUME ["/app/baidunetdisk", "/app/baidunetdiskdownload"]
 WORKDIR $HOME
 ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
 CMD ["--wait"]
